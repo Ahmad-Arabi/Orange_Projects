@@ -1,6 +1,6 @@
 :root {
     --background-color: #020035 ;
-    --accent-color: #f49f1c;
+    --accent-color: #8dbbf4;
     --accent-blue:#59a3ff;
     --thirds-color: #f7afb8;
 }
@@ -130,9 +130,6 @@ body {
 .profile_pic {
     display: flex;
     padding: 0em 1em 1em 0em;
-    border-radius: 50%;
-    box-shadow: 2px 2px 10px var(--accent-color);
-    background-image: linear-gradient(to bottom right, var(--background-color), var(--accent-color));
     height: 60%;
     align-self: center;
 }
@@ -141,6 +138,8 @@ body {
 .profile_pic img {
     border-radius: 50%;
     box-shadow: 2px 2px 50px var(--accent-color);
+    border-radius: 50%;
+    background-image: linear-gradient(to bottom right, var(--background-color), var(--accent-color));
 }
 
 .header_text {
@@ -547,7 +546,7 @@ textarea {
     color: var(--background-color);
     text-decoration-color: var(--accent-color);
     transition: 0.5s ease-in-out;
-    background-color: var(--accent-color);
+    background-image: linear-gradient(to bottom, white, var(--accent-color));
     padding: 0.2em 0.6em;
     border-radius: 2em;
     transform: scale(1.1);
@@ -599,9 +598,15 @@ textarea {
     }
 
     .profile_pic {
-        max-height: 40%;
-        width: 40vw;
+        display: fixed;
+        height: cover;
+        width: cover;
+        justify-content: center;
      
+    }
+
+    .profile_pic img {
+        width: cover;
     }
 
     .social {
@@ -716,5 +721,8 @@ textarea {
         .avatar_card {
             font-size: 5vw;
         }
-      
+
+        input {
+            padding: 0;
+        }
 }
