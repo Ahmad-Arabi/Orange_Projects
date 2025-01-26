@@ -351,11 +351,12 @@ body {
     border-radius: 1em;
     transition: 0.25s ease-in-out;
     font-weight: bold;
+    transform: scale(1.05);
 }
 
 .projects_list > div .text {
-    border: 1px solid var(--accent-color);
-    box-shadow: 1px 1px 10px var(--accent-color);
+    /* border: 1px solid var(--accent-color); */
+    /* box-shadow: 1px 1px 10px var(--accent-color); */
     padding: 0.5em;
     flex: 1;
     border-radius: 1em;
