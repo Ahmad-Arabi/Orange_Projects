@@ -22,31 +22,21 @@ body {
 }
 
 .navigation {
-  padding: 2vh 4vw;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 100vw;
-  max-width: 100%;
+  padding: 0px 50px;
   position: sticky;
   top: 0;
   background-image: linear-gradient(
     to bottom,
-    rgba(2, 0, 53, 1),
-    rgba(2, 0, 53, 0.3)
-  );
+    rgba(2, 0, 53, 0.3),
+    rgba(2, 0, 53, 1)
+  ) !important;
   color: var(--accent-color);
-  box-shadow: 2px 2px 20px rgba(2, 0, 53, 0.3);
+  box-shadow: 2px 2px 20px rgba(0, 0, 0, 0.3);
   z-index: 90;
-  border-radius: 0em 0em 0.5em 0.5em;
 }
 
 .nav_container {
-  display: flex;
-  max-width: 50vw;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  font-size: 1.2em;
+  gap: 10px;
 }
 
 .nav_container li {
@@ -71,6 +61,9 @@ body {
   border-radius: 1em;
 }
 
+#navbarSupportedContent {
+  justify-content: flex-end;
+}
 .logo {
   font-size: 2.5em;
   transition: 0.25s ease-in;
@@ -89,11 +82,11 @@ body {
 
 .header {
   background-color: var(--background-color);
-  height: 80vh;
   width: 100%;
-  padding: 2em 15em;
-  display: flex;
-  justify-content: space-between;
+  /* padding: 2em 15em;
+  display: flex; */
+  /* justify-content: space-between; */
+  /* height: 100vh; */
   box-shadow: 2px 2px 10px var(--background-color);
   z-index: 100;
   overflow: hidden;
@@ -136,7 +129,8 @@ body {
   display: flex;
   padding: 0em 1em 1em 0em;
   height: 60%;
-  align-self: center;
+  align-content: center;
+  justify-content: center;
 }
 
 .profile_pic img {
@@ -159,6 +153,7 @@ body {
 .header_text h1 {
   transform: scale(1.5);
   transition: 0.5s ease-in-out;
+  font-size: 1.3em;
 }
 
 .header_text h1 > span {
@@ -571,6 +566,14 @@ textarea {
     flex-wrap: wrap;
   }
 
+  .profile_image_con {
+    display: none;
+  }
+
+  .navigation {
+    padding: 0px 30px;
+  }
+
   .services_list {
     flex-wrap: wrap;
   }
@@ -587,8 +590,8 @@ textarea {
 
   .header {
     flex-direction: column-reverse;
-    align-items: stretch;
-    justify-content: start;
+    align-items: center;
+    justify-content: center;
     gap: 1em;
   }
 
@@ -614,14 +617,6 @@ textarea {
 
   .logo {
     font-size: 1.8em;
-  }
-  .navigation {
-    flex-direction: column;
-    align-items: center;
-    gap: 0.5em;
-  }
-  .nav_container {
-    max-width: fit-content;
   }
 
   .form {
@@ -650,6 +645,10 @@ textarea {
 @media screen and (max-width: 430px) {
   .header {
     padding: 1em 0em;
+  }
+
+  .navigation {
+    padding: 0px 0px;
   }
 
   .header_text {
@@ -701,20 +700,6 @@ textarea {
 
   main h2 {
     font-size: 1.2em;
-  }
-
-  .nav_container {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-gap: 0.6em 0.2em;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-  }
-
-  .contactme {
-    grid-column: 1/4;
-    justify-self: center;
   }
 
   .logo {
